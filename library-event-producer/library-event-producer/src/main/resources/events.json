@@ -1,0 +1,65 @@
+[
+  {
+    "libraryEventId": null,
+    "libraryEventType": "NEW",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": 1,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot 2.X",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": 2,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot 2.X",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": 123,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": 999,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": 2,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot",
+      "bookAuthor": "Test Author"
+    }
+  },
+  {
+    "libraryEventId": null,
+    "libraryEventType": "UPDATE",
+    "book": {
+      "bookId": 456,
+      "bookName": "Kafka Using Spring Boot",
+      "bookAuthor": "Test Author"
+    }
+  }
+]
