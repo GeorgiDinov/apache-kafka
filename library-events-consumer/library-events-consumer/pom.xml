@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.georgidinov</groupId>
-    <artifactId>library-event-producer</artifactId>
+    <artifactId>library-events-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>library-event-producer</name>
-    <description>library-event-producer</description>
+    <name>library-events-consumer</name>
+    <description>library-events-consumer</description>
 
     <properties>
         <java.version>17</java.version>
@@ -23,22 +23,26 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -89,8 +93,8 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>${basedir}/src/test/unit-test/java</source>
-                                <source>${basedir}/src/test/integration-test/java</source>
+                                <source>${basedir}/src/test/unit/java</source>
+                                <source>${basedir}/src/test/intg/java</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -102,7 +106,7 @@
                         <configuration>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/src/test/integration-test/resources</directory>
+                                    <directory>${basedir}/src/test/intg/resources</directory>
                                 </resource>
                             </resources>
                         </configuration>
@@ -115,7 +119,7 @@
                         <configuration>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/src/test/unit-test/resources</directory>
+                                    <directory>${basedir}/src/test/unit/resources</directory>
                                 </resource>
                             </resources>
                         </configuration>

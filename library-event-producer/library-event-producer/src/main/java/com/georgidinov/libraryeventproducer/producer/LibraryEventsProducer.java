@@ -70,8 +70,8 @@ public class LibraryEventsProducer {
         ProducerRecord<Integer, String> producerRecord = buildProducerRecord(key, value);
         CompletableFuture<SendResult<Integer, String>> completableFuture = kafkaTemplate.send(producerRecord);
 
-        // 1. blocking call - get metadata about the kafka cluster (only the very first call e.g. when starting hte application)
-        // 2. send message happens - returns a completable future
+        // 1. blocking call - get metadata about the kafka cluster (only the very first call e.g. when starting hte application) =>min.in.sync.replicas
+        // 2. send message happens - returns a completable future => spring.kafka.producer.retries
         return completableFuture.whenComplete(((sendResult, throwable) -> {
             if (throwable != null) {
                 handleFailure(key, value, throwable);

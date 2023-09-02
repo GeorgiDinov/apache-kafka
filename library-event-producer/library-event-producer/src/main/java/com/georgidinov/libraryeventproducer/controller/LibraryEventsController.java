@@ -32,7 +32,6 @@ public class LibraryEventsController {
         //libraryEventsProducer.sendLibraryEvent(libraryEvent);
         //libraryEventsProducer.sendLibraryEventApproachTwo(libraryEvent);
         libraryEventsProducer.sendLibraryEventApproachThree(libraryEvent);
-        log.info("after sending the event");
         return ResponseEntity.status(HttpStatus.CREATED).body(libraryEvent);
     }
 
